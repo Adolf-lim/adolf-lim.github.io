@@ -775,28 +775,24 @@
                                     Rs.800
                                 </li>
                             </ul>
-                            <form action="#" class="doming-input-form wow fadeInUp" data-wow-delay=".5s">
-                                <div class="doming-input">
-                                    <input type="text" placeholder="domain.com">
-                                    <button class="theme-btn bg-color-2" type="submit">Search Now</button>
-                                    <div class="select-area">
-                                        <select name="cate" class="category">
-                                            <option value="1">
-                                                .com
-                                            </option>
-                                            <option value="1">
-                                                .net
-                                            </option>
-                                            <option value="1">
-                                                .info
-                                            </option>
-                                            <option value="1">
-                                                .store
-                                            </option>
-                                        </select>
-                                     </div>
-                                </div>
-                            </form>
+                          <form id="domainSearch" class="doming-input-form wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="doming-input">
+                                      <input type="text" id="domainName" placeholder="Enter domain (e.g. example)">
+                                            <div class="select-area">
+                                         <select id="domainExtension" name="cate" class="category">
+                                             <option value=".com">.com</option>
+                                             <option value=".net">.net</option>
+                                             <option value=".info">.info</option>
+                                                <option value=".store">.store</option>
+                                          </select>
+                             </div>
+                     <button class="theme-btn bg-color-2" type="submit">Search Now</button>
+                    </div>
+                    </form>
+
+                <!-- Result Display Area -->
+                    <div id="result" style="margin-top: 15px; font-weight: bold;"></div>
+
                         </div>
                     </div>
                     <div class="col-lg-5 wow fadeInUp" data-wow-delay=".4s">
@@ -1933,5 +1929,35 @@
         <script src="assets/js/wow.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
+        <script>
+document.getElementById("domainSearch").addEventListener("submit", function(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById("domainName").value.trim();
+  const ext = document.getElementById("domainExtension").value;
+  const domain = name + ext;
+
+  const resultDiv = document.getElementById("result");
+  resultDiv.innerHTML = "🔍 Checking availability...";
+
+  fetch("https://ratedisco.com/domain-check.php?domain=" + encodeURIComponent(domain))
+    .then(response => response.json())
+    .then(data => {
+      if (data.result === "success") {
+        if (data.available) {
+          resultDiv.innerHTML = `<span style="color:green;">✅ ${domain} is available!</span>`;
+        } else {
+          resultDiv.innerHTML = `<span style="color:red;">❌ ${domain} is already taken.</span>`;
+        }
+      } else {
+        resultDiv.innerHTML = `<span style="color:red;">❌ Error: ${data.message || 'Unknown issue'}</span>`;
+      }
+    })
+    .catch(() => {
+      resultDiv.innerHTML = `<span style="color:red;">❌ Could not connect to server.</span>`;
+    });
+});
+</script>
+
     </body>
 </html>
