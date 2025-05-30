@@ -797,7 +797,7 @@
                                      </div>
                                 </div>
                             </form> -->
-                             <form id="domainSearch" class="doming-input-form wow fadeInUp" data-wow-delay=".5s">
+                             <!-- <form id="domainSearch" class="doming-input-form wow fadeInUp" data-wow-delay=".5s">
   <div class="doming-input">
     <input type="text" id="domainName" placeholder="Enter domain (e.g. example)">
     <div class="select-area">
@@ -810,10 +810,42 @@
     </div>
     <button class="theme-btn bg-color-2" type="submit">Search Now</button>
   </div>
+</form> -->
+
+<!-- your custom form -->
+<form id="myDomainForm">
+  <input type="text" name="domain" id="domainInput" placeholder="Enter domain" required>
+  <button type="submit">Check</button>
 </form>
 
+<div id="result"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$('#myDomainForm').on('submit', function(e){
+  e.preventDefault();
+  var domain = $('#domainInput').val().trim();
+  if (!domain) return;
+
+  $.getJSON('/domain-check.php', { domain: domain })
+   .done(function(data){
+     if (data.error) {
+       $('#result').text('Error: ' + data.error);
+     } else if (data.available) {
+       $('#result').html('<strong>' + domain + '</strong> is <span style="color:green">available</span>!');
+     } else {
+       $('#result').html('<strong>' + domain + '</strong> is <span style="color:red">taken</span>.');
+     }
+   })
+   .fail(function(xhr, status, err){
+     $('#result').text('Request failed: ' + err);
+   });
+});
+</script>
+
+
 <!-- Result Display Area -->
-<div id="result" style="margin-top: 15px; font-weight: bold;"></div>   
+<!-- <div id="result" style="margin-top: 15px; font-weight: bold;"></div>    -->
    <!-- <form id="domainSearch" class="doming-input-form wow fadeInUp" data-wow-delay=".5s"> -->
   <!-- <div class="doming-input">
     <input type="text" id="domainName" placeholder="Enter domain (e.g. example)">
@@ -1967,7 +1999,7 @@
         <script src="assets/js/wow.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
-        <script>
+        <!-- <script>
 document.getElementById("domainSearch").addEventListener("submit", function(e) {
   e.preventDefault();
   
@@ -1995,7 +2027,7 @@ document.getElementById("domainSearch").addEventListener("submit", function(e) {
       resultDiv.innerHTML = `<span style="color:red;">❌ Could not connect to server.</span>`;
     });
 });
-</script>
+</script> -->
 
     </body>
 </html>
