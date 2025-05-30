@@ -775,24 +775,61 @@
                                     Rs.800
                                 </li>
                             </ul>
-                          <form id="domainSearch" class="doming-input-form wow fadeInUp" data-wow-delay=".5s">
-                                    <div class="doming-input">
-                                      <input type="text" id="domainName" placeholder="Enter domain (e.g. example)">
-                                            <div class="select-area">
-                                         <select id="domainExtension" name="cate" class="category">
-                                             <option value=".com">.com</option>
-                                             <option value=".net">.net</option>
-                                             <option value=".info">.info</option>
-                                                <option value=".store">.store</option>
-                                          </select>
-                             </div>
-                     <button class="theme-btn bg-color-2" type="submit">Search Now</button>
-                    </div>
-                    </form>
+                            <form action="#" class="doming-input-form wow fadeInUp" data-wow-delay=".5s">
+                                <div class="doming-input">
+                                    <input type="text" placeholder="domain.com">
+                                    <button class="theme-btn bg-color-2" type="submit">Search Now</button>
+                                    <div class="select-area">
+                                        <select name="cate" class="category">
+                                            <option value="1">
+                                                .com
+                                            </option>
+                                            <option value="1">
+                                                .net
+                                            </option>
+                                            <option value="1">
+                                                .info
+                                            </option>
+                                            <option value="1">
+                                                .store
+                                            </option>
+                                        </select>
+                                     </div>
+                                </div>
+                            </form>
+                             <!-- <form id="domainSearch" class="doming-input-form wow fadeInUp" data-wow-delay=".5s">
+  <div class="doming-input">
+    <input type="text" id="domainName" placeholder="Enter domain (e.g. example)">
+    <div class="select-area">
+      <select id="domainExtension" name="cate" class="category">
+        <option value=".com">.com</option>
+        <option value=".net">.net</option>
+        <option value=".info">.info</option>
+        <option value=".store">.store</option>
+      </select>
+    </div>
+    <button class="theme-btn bg-color-2" type="submit">Search Now</button>
+  </div>
+</form> -->
 
-                <!-- Result Display Area -->
-                    <div id="result" style="margin-top: 15px; font-weight: bold;"></div>
+<!-- Result Display Area -->
+<!-- <div id="result" style="margin-top: 15px; font-weight: bold;"></div>      <form id="domainSearch" class="doming-input-form wow fadeInUp" data-wow-delay=".5s"> -->
+  <div class="doming-input">
+    <input type="text" id="domainName" placeholder="Enter domain (e.g. example)">
+    <div class="select-area">
+      <select id="domainExtension" name="cate" class="category">
+        <option value=".com">.com</option>
+        <option value=".net">.net</option>
+        <option value=".info">.info</option>
+        <option value=".store">.store</option>
+      </select>
+    </div>
+    <button class="theme-btn bg-color-2" type="submit">Search Now</button>
+  </div>
+</form>
 
+<!-- Result Display Area -->
+<div id="result" style="margin-top: 15px; font-weight: bold;"></div>
                         </div>
                     </div>
                     <div class="col-lg-5 wow fadeInUp" data-wow-delay=".4s">
@@ -1929,7 +1966,7 @@
         <script src="assets/js/wow.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
-        <script>
+        <!-- <script>
 document.getElementById("domainSearch").addEventListener("submit", function(e) {
   e.preventDefault();
   
@@ -1957,7 +1994,7 @@ document.getElementById("domainSearch").addEventListener("submit", function(e) {
       resultDiv.innerHTML = `<span style="color:red;">❌ Could not connect to server.</span>`;
     });
 });
-</script>
+</script> -->
 
     </body>
 </html>
