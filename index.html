@@ -33,59 +33,7 @@
     </head>
     <body>
 
-        <!-- Preloader Start -->
-        <div id="preloader" class="preloader">
-            <div class="animation-preloader">
-                <div class="spinner">                
-                </div>
-                <div class="txt-loading">
-                    <span data-text-preloader="R" class="letters-loading">
-                        R
-                    </span>
-                    <span data-text-preloader="A" class="letters-loading">
-                        A
-                    </span>
-                    <span data-text-preloader="T" class="letters-loading">
-                        T
-                    </span>
-                    <span data-text-preloader="E" class="letters-loading">
-                        E
-                    </span>
-                    <span data-text-preloader="D" class="letters-loading">
-                        D
-                    </span>
-                    <span data-text-preloader="I" class="letters-loading">
-                        I
-                    </span>
-                    <span data-text-preloader="S" class="letters-loading">
-                        S
-                    </span>
-                    <span data-text-preloader="C" class="letters-loading">
-                        C
-                    </span>
-                    <span data-text-preloader="O" class="letters-loading">
-                        O
-                    </span>
-                </div>
-                <p class="text-center">Your Hosting Patner</p>
-            </div>
-            <div class="loader">
-                <div class="row">
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <!--<< Mouse Cursor Start >>-->  
         <div class="mouse-cursor cursor-outer"></div>
@@ -691,11 +639,15 @@
                                     </div>
                                 </div>
                                 <div class="mt-4">
-                                    <button type="button" class="theme-btn w-100">
-                                        <span>
-                                            Log in
-                                        </span>
-                                    </button>
+                                    <div class="card border-0 shadow-sm p-4 mb-3" style="background: linear-gradient(90deg, #e3f0ff 0%, #f8fbff 100%); border-radius: 1.5rem; display: flex; align-items: center;">
+                                      <div style="background: #007bff; border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; margin-right: 20px;">
+                                        <i class="fas fa-shield-alt" style="color: #fff; font-size: 2rem;"></i>
+                                      </div>
+                                      <div>
+                                        <h3 class="mb-1" style="color: #007bff; font-weight: 700;">99.9% Uptime Guarantee</h3>
+                                        <p class="mb-0 text-muted" style="font-size: 1.1rem;">We keep your website running smoothly — day and night. Enjoy peace of mind with our industry-leading uptime and proactive monitoring.</p>
+                                      </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -734,13 +686,7 @@
             <div class="dot-right">
                 <img src="assets/img/hero/hero-2-dot-right.png" alt="img">
             </div>
-            <div class="hero-social">
-                <span>Follow on</span>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            </div>
+            
             <div class="container">
                 <div class="row g-4 justify-content-between align-items-center">
                     <div class="col-lg-6">
@@ -749,18 +695,8 @@
                                 Fast & secure Best
                                 web <span>Hosting</span>
                             </h1>
-                            <p class="wow fadeInUp" data-wow-delay=".5s">Unlimited storage, unmetered bandwidth, unbeatable hosting. <br> This gator’s got ya covered.</p>
-                            <div class="hero-author">
-                                <a href="contact.html" class="theme-btn bg-color-2 wow fadeInUp" data-wow-delay=".7s">
-                                    Get Started <i class="fas fa-long-arrow-alt-right"></i>
-                                </a>
-                                <span class="button-text wow fadeInUp" data-wow-delay=".9s">
-                                    <a href="https://www.youtube.com/watch?v=H9pgc4CEtcs" class="video-btn ripple video-popup">
-                                        <i class="fa-solid fa-play"></i>
-                                    </a>
-                                    <span class="ms-4 d-line">Watch Video</span>
-                                </span>
-                            </div>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">Unlimited storage, unmetered bandwidth, unbeatable hosting. <br> RateDisco Hostings got you covered.</p>
+                            
                             <ul class="hosting-list wow fadeInUp" data-wow-delay=".3s">
                                 <li>
                                     <span>.com</span>
@@ -813,9 +749,11 @@
 </form> -->
 
 <!-- your custom form -->
-<form id="myDomainForm">
-  <input type="text" name="domain" id="domainInput" placeholder="Enter domain" required>
-  <button type="submit">Check</button>
+<form id="myDomainForm" class="d-flex align-items-center mt-3" style="max-width: 420px;">
+  <input type="text" name="domain" id="domainInput" class="form-control rounded-start-pill shadow-sm" placeholder="Enter domain" required style="height: 48px;">
+  <button type="submit" class="btn btn-primary rounded-end-pill px-4 ms-2 d-flex align-items-center" style="height: 48px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+    <i class="fas fa-search me-2"></i> Check
+  </button>
 </form>
 
 <div id="result"></div>
@@ -934,61 +872,39 @@ $('#myDomainForm').on('submit', function(e){
         </section>
 
         <!-- About Section Start -->
-        <section class="about-section section-padding fix">
-            <div class="container">
-                <div class="about-wrapper">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-lg-6">
-                            <div class="about-image-items">
-                                <div class="about-sub">
-                                    Successful Hosting 25k+
-                                </div>
-                                <div class="shape-image">
-                                    <img src="assets/img/about/shape.png" alt="img">
-                                </div>
-                                <div class="about-image-1 wow fadeInLeft" data-wow-delay=".3s">
-                                    <img src="assets/img/about/host.jpg" alt="img">
-                                    <div class="about-image-2 wow fadeInUp" data-wow-delay=".5s">
-                                        <img src="assets/img/about/host1.jpg" alt="img">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="about-content">
-                                <div class="section-title">
-                                    <span class="wow fadeInUp">ABOUT US</span>
-                                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Choose a Website Hosting Partner Right Now.</h2>
-                                </div>
-                                <p class="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
-                                    There are many variations of passages of Lorem Ipsum available, but the majority have  suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-                                </p>
-                                <div class="about-counter-items">
-                                    <div class="counter-items wow fadeInUp" data-wow-delay=".3s">
-                                        <h2><span class="count">50</span>k</h2>
-                                        <h6>Global Customers</h6>
-                                    </div>
-                                    <div class="counter-items ps-0 wow fadeInUp" data-wow-delay=".5s">
-                                        <h2><span class="count">98</span>%</h2>
-                                        <h6>Success Case</h6>
-                                    </div>
-                                    <div class="video-thumb wow fadeInUp" data-wow-delay=".7s">
-                                        <img src="assets/img/about/video-img.jpg" alt="video-img">
-                                        <div class="video-box">
-                                            <span class="button-text wow fadeInUp">
-                                                <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" class="video-btn ripple video-popup">
-                                                    <i class="fa-solid fa-play"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Image Column -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="position-relative">
+          <img src="assets/img/about/host.jpg" class="img-fluid rounded shadow" alt="Web Hosting Image">
+        </div>
+      </div>
+
+      <!-- Content Column -->
+      <div class="col-lg-6">
+        <h5 class="text-uppercase text-primary mb-2">About Us</h5>
+        <h2 class="mb-3">Your Trusted Website Hosting Partner</h2>
+        <p class="text-muted">
+          We help individuals and businesses get online with reliable and affordable web hosting. Our services are built for performance, security, and simplicity — perfect for beginners and professionals alike.
+        </p>
+        <div class="mt-4">
+          <div class="card border-0 shadow-sm p-4 mb-3" style="background: linear-gradient(90deg, #e3f0ff 0%, #f8fbff 100%); border-radius: 1.5rem; display: flex; align-items: center;">
+            <div style="background: #007bff; border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; margin-right: 20px;">
+              <i class="fas fa-shield-alt" style="color: #fff; font-size: 2rem;"></i>
             </div>
-        </section>
+            <div>
+              <h3 class="mb-1" style="color: #007bff; font-weight: 700;">99.9% Uptime Guarantee</h3>
+              <p class="mb-0 text-muted" style="font-size: 1.1rem;">We keep your website running smoothly — day and night. Enjoy peace of mind with our industry-leading uptime and proactive monitoring.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         
         <!-- Pricing Section Start -->
@@ -1318,6 +1234,7 @@ $('#myDomainForm').on('submit', function(e){
                                         <li><span><i class="fa-solid fa-check"></i> SSH Access</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> 1 Free Google Workspace Account</span></li>
                                     </ul>
+                                    
                                     <div class="pricing-button">
                                         <a href="https://admin.ratedisco.com/index.php/store/shared-hosting/web-hosting" class="pricing-btn">
                                             Get Started Now
@@ -1328,20 +1245,150 @@ $('#myDomainForm').on('submit', function(e){
                             </div>
                             
                             <!-- <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="pricing-items style-2">
+                                <h6 class="top-text">Cloud Startup</h6>
+                                  <div class="pricing-header-2">
+                                  <div class="price-list">
+                                   <del>1250</del>
+                              <span>SAVE 60%</span>
+                                </div>
+                                 <h2>Rs.850 <sub>/mo</sub></h2>
+                                </div>
+                            <p class="text-center">
+                           Scalable Cloud Hosting for Ambitious Projects
+                           </p>
+        <ul class="pricing-list">
+            <li><span><i class="fa-solid fa-check"></i> Unlimited Website</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Unlimited NVMe-SSD Storage</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Unlimited Bandwidth</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Daily Backups</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Unlimited MySQL Databases</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Unlimited Free SSL</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Unlimited E-mail Accounts</span></li>
+            <li><span><i class="fa-solid fa-check"></i> cPanel + 1 Click Installer</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Managed WordPress</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Multiple PHP Versions</span></li>
+            <li><span><i class="fa-solid fa-check"></i> PHP, NodeJS & Python Support</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Free Website Migration</span></li>
+            <li><span><i class="fa-solid fa-check"></i> 24/7 Support</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Multiple Data Centers</span></li>
+            <li><span><i class="fa-solid fa-check"></i> 99.99% Uptime Guarantee</span></li>
+            <li><span><i class="fa-solid fa-check"></i> 4GB LVE RAM</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Free .COM/.NET/.ORG Domain</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Anycast Nameservers</span></li>
+            <li><span><i class="fa-solid fa-check"></i> SSH Access</span></li>
+            <li><span><i class="fa-solid fa-check"></i> 1 Free Google Workspace Account</span></li>
+        </ul>
+        <div class="pricing-button">
+            <a href="contact.html" class="pricing-btn">
+                Get Started Now
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+        </div>
+    </div> -->
+<!-- </div> -->
+
+                        </div>
+                    </div>
+                    <div id="yearly" class="tab-pane fade " role="tabpanel">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                                 <div class="pricing-items style-2">
-                                    <h6 class="top-text">Cloud Startup</h6>
+                                    <h6 class="top-text">Regular Plans</h6>
                                     <div class="pricing-header-2">
-                                        <div class="price-list">
-                                            <del>Rs.1250</del>
-                                            <span>SAVE 60%</span>
-                                        </div>
-                                        <h2>Rs.750 <sub>/mo</sub></h2>
+                                        <!-- <div class="price-list">
+                                            <del>Rs.350</del>
+                                            <span>SAVE 75%</span>
+                                        </div> -->
+                                        <h2>Rs.500 <sub>/mo</sub></h2>
                                     </div>
                                     <p class="text-center">
-                                        Scalable Cloud Hosting for Ambitious Projects
+                                        Empower Your Business Hosting
                                     </p>
                                     <ul class="pricing-list">
-                                        <li><span><i class="fa-solid fa-check"></i> Unlimited Website</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Standard Performance</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> 1 Website</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Unlimited NVMe-SSD Storage</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Unmetered Bandwidth</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Weekly Backups</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> 5 MySQL Databases</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Free SSL Certificate</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> 10 E-mail Accounts</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> DA Control Panel</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Managed WordPress</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Multiple PHP Versions</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Free Website Migration</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> 24/7 Support</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Single Data Center</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> 99.99% Uptime Guarantee</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> 2GB LVE RAM</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> File Limit: 1,00,000</span></li>
+                                    </ul>
+                                    <div class="pricing-button">
+                                        <a href="https://admin.ratedisco.com/index.php/store/shared-hosting/web-hosting" class="pricing-btn">
+                                            Get Started Now
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="pricing-items style-2">
+                                    <h6 class="top-text">Premium Plans</h6>
+                                    <div class="pricing-header-2">
+                                        <!-- <div class="price-list">
+                                            <del>Rs.310</del>
+                                            <span>SAVE 70%</span>
+                                        </div> -->
+                                        <h2>Rs.560 <sub>/mo</sub></h2>
+                                    </div>
+                                    <p class="text-center">
+                                        Advanced Hosting for Growing Businesses
+                                    </p>
+                                    <ul class="pricing-list">
+                                        <li><span><i class="fa-solid fa-check"></i> Standard Performance</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> 5 Websites</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Unlimited NVMe-SSD Storage</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Unmetered Bandwidth</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Daily Backups</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> 10 MySQL Databases</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Free SSL Certificate</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> 25 E-mail Accounts</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> DirectAdmin Control Panel</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Managed WordPress</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Multiple PHP Versions</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Free Website Migration</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> 24/7 Support</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> Single Data Center</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> 99.99% Uptime Guarantee</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> 2GB LVE RAM</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> File Limit: 2,50,000</span></li>
+                                    </ul>
+                                    <div class="pricing-button">
+                                        <a href="https://admin.ratedisco.com/index.php/store/shared-hosting/web-hosting" class="pricing-btn">
+                                            Get Started Now
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                                <div class="pricing-items style-2">
+                                    <h6 class="top-text">Business Plans</h6>
+                                    <div class="pricing-header-2">
+                                        <!-- <div class="price-list">
+                                            <del>Rs.650</del>
+                                            <span>SAVE 65%</span>
+                                        </div> -->
+                                        <h2>Rs.585 <sub>/mo</sub></h2>
+                                    </div>
+                                    <p class="text-center">
+                                        Complete Hosting for Large-Scale Projects
+                                    </p>
+                                    <ul class="pricing-list">
+                                        <li><span><i class="fa-solid fa-check"></i> Unlimited Websites</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Unlimited NVMe-SSD Storage</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Unlimited Bandwidth</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Daily Backups</span></li>
@@ -1362,24 +1409,68 @@ $('#myDomainForm').on('submit', function(e){
                                         <li><span><i class="fa-solid fa-check"></i> SSH Access</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> 1 Free Google Workspace Account</span></li>
                                     </ul>
+                                    
                                     <div class="pricing-button">
-                                        <a href="contact.html" class="pricing-btn">
+                                        <a href="https://admin.ratedisco.com/index.php/store/shared-hosting/web-hosting" class="pricing-btn">
                                             Get Started Now
                                             <i class="fa-solid fa-arrow-right-long"></i>
                                         </a>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             
+                            <!-- <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="pricing-items style-2">
+                                <h6 class="top-text">Cloud Startup</h6>
+                                  <div class="pricing-header-2">
+                                  <div class="price-list">
+                                   <del>1250</del>
+                              <span>SAVE 60%</span>
+                                </div>
+                                 <h2>Rs.850 <sub>/mo</sub></h2>
+                                </div>
+                            <p class="text-center">
+                           Scalable Cloud Hosting for Ambitious Projects
+                           </p>
+        <ul class="pricing-list">
+            <li><span><i class="fa-solid fa-check"></i> Unlimited Website</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Unlimited NVMe-SSD Storage</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Unlimited Bandwidth</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Daily Backups</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Unlimited MySQL Databases</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Unlimited Free SSL</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Unlimited E-mail Accounts</span></li>
+            <li><span><i class="fa-solid fa-check"></i> cPanel + 1 Click Installer</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Managed WordPress</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Multiple PHP Versions</span></li>
+            <li><span><i class="fa-solid fa-check"></i> PHP, NodeJS & Python Support</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Free Website Migration</span></li>
+            <li><span><i class="fa-solid fa-check"></i> 24/7 Support</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Multiple Data Centers</span></li>
+            <li><span><i class="fa-solid fa-check"></i> 99.99% Uptime Guarantee</span></li>
+            <li><span><i class="fa-solid fa-check"></i> 4GB LVE RAM</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Free .COM/.NET/.ORG Domain</span></li>
+            <li><span><i class="fa-solid fa-check"></i> Anycast Nameservers</span></li>
+            <li><span><i class="fa-solid fa-check"></i> SSH Access</span></li>
+            <li><span><i class="fa-solid fa-check"></i> 1 Free Google Workspace Account</span></li>
+        </ul>
+        <div class="pricing-button">
+            <a href="contact.html" class="pricing-btn">
+                Get Started Now
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+        </div>
+    </div> -->
+<!-- </div> -->
+
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Hosting Section Start -->
-        <section class="hosting-section fix section-padding">
+       <!-- <section class="hosting-section fix section-padding">
             <div class="container">
                 <div class="section-title text-center">
                     <span class="style-border wow fadeInUp">Our Services</span>
@@ -1437,9 +1528,10 @@ $('#myDomainForm').on('submit', function(e){
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         
         <!-- Hosting Section Start -->
+        <!--
         <section class="offer-hosting-section section-padding fix bg-cover" style="background-image: url('assets/img/hosting/hosting.jpg');">
             <div class="container">
                 <div class="row g-5">
@@ -1484,57 +1576,48 @@ $('#myDomainForm').on('submit', function(e){
                     </div>
                 </div>
             </div>
-        </section>
+        </section>  -->
 
         <!-- Feature Section Start -->
-        <section class="feature-hosting-section fix section-padding">
-            <div class="container">
-                <div class="feature-content-warpper margin-top-60">
-                    <div class="row g-4 justify-content-between align-items-center">
-                        <div class="col-lg-5 wow fadeInUp" data-wow-delay=".3s">
-                            <div class="feature-hosting-image">
-                                <img src="assets/img/host-girl.png" alt="img">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="feature-hosting-content">
-                                <div class="section-title">
-                                    <span class="wow fadeInUp">Best hosting</span>
-                                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Get the Good Level Hosting <br> at Budget Price</h2>
-                                </div>
-                                <p class="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
-                                    Pellentesque varius mauris sit amet nisi tincidunt finibus Donec faucibus diam quis feugiat accumsan Integer molestie sapien ut ipsum fermentum feugiat Curabitur.
-                                </p>
-                                <div class="list-items">
-                                    <ul class="wow fadeInUp" data-wow-delay=".3s">
-                                        <li>
-                                            <i class="far fa-check"></i>
-                                            30-day money back guarantee
-                                        </li>
-                                        <li>
-                                            <i class="far fa-check"></i>
-                                            Web site Marketing Solutions
-                                        </li>
-                                    </ul>
-                                    <ul class="wow fadeInUp" data-wow-delay=".5s">
-                                        <li>
-                                            <i class="far fa-check"></i>
-                                            Unlimited Application Installation
-                                        </li>
-                                        <li>
-                                            <i class="far fa-check"></i>
-                                            24/7 system Monitoring
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a href="pricing.html" class="theme-btn wow fadeInUp" data-wow-delay=".5s">See Pricing <i class="fas fa-long-arrow-alt-right"></i> 
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section class="feature-hosting-section py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Image Column -->
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <img src="assets/img/host-girl.png" alt="Hosting Support" class="img-fluid rounded">
+      </div>
+      
+      <!-- Content Column -->
+      <div class="col-lg-7">
+        <h5 class="text-uppercase text-primary mb-2">Best Hosting</h5>
+        <h2 class="mb-3">Affordable & Reliable Hosting for Everyone</h2>
+        <p class="text-muted">
+          Experience high-performance hosting without breaking the bank. Whether you're just starting out or running a business, our hosting plans offer everything you need for online success.
+        </p>
+        
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>30-day money-back guarantee</li>
+              <li><i class="fas fa-check text-success me-2"></i>Website marketing tools</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check text-success me-2"></i>One-click app installation</li>
+              <li><i class="fas fa-check text-success me-2"></i>24/7 monitoring & support</li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="https://ratedisco.com/wordpress-hosting.html" class="btn btn-primary mt-4">See Pricing <i class="fas fa-arrow-right ms-2"></i></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         <!-- Cta contact Section Start -->
         <section class="cta-contact-section">
@@ -1554,7 +1637,7 @@ $('#myDomainForm').on('submit', function(e){
         </section>
 
         <!-- Testimonial Section Start -->
-        <section class="testimonial-section section-padding bg-cover" style="background-image: url('assets/img/testimonial/testimonial-bg.jpg');">
+       <!--  <section class="testimonial-section section-padding bg-cover" style="background-image: url('assets/img/testimonial/testimonial-bg.jpg');">
             <div class="container">
                 <div class="testimonial-wrapper-2">
                     <div class="arry-button">
@@ -1642,7 +1725,7 @@ $('#myDomainForm').on('submit', function(e){
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
 
         <!-- Faq Section Start -->
         <section class="faq-section fix section-padding">
@@ -1672,7 +1755,12 @@ $('#myDomainForm').on('submit', function(e){
                                             </h5>
                                             <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordion">
                                                 <div class="accordion-body">
-                                                    Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio. Mauris et mollis quam. Nullam fringilla erat id ante commodo sodales. In maximus ultrices euismod. Vivamus porta justo ex.
+                                                    We use the DirectAdmin control panel, which makes WordPress management easy. To install a WordPress theme:<br>
+                                                    1. Log in to DirectAdmin.<br>
+                                                    2. Go to "Softaculous Apps Installer" and select WordPress.<br>
+                                                    3. Access your WordPress dashboard, then go to Appearance &gt; Themes &gt; Add New.<br>
+                                                    4. Choose or upload your theme and click "Install".<br>
+                                                    If you need help, our support team is available 24/7!
                                                 </div>
                                             </div>
                                         </div>
@@ -1684,7 +1772,7 @@ $('#myDomainForm').on('submit', function(e){
                                             </h5>
                                             <div id="faq2" class="accordion-collapse show" data-bs-parent="#accordion">
                                                 <div class="accordion-body">
-                                                    Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio. Mauris et mollis quam. Nullam fringilla erat id ante commodo sodales. In maximus ultrices euismod. Vivamus porta justo ex.
+                                                    Yes! We offer custom hosting solutions tailored to your needs. Whether you need more resources, special configurations, or unique features, just contact our team and we’ll set up a plan using DirectAdmin panel to match your requirements.
                                                 </div>
                                             </div>
                                         </div>
@@ -1696,7 +1784,7 @@ $('#myDomainForm').on('submit', function(e){
                                             </h5>
                                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordion">
                                                 <div class="accordion-body">
-                                                    There are many variations of passages Lorem Ipsum but the majority have suffered alteration in some form, by injected humor.
+                                                    Absolutely! Our servers are optimized for speed and security. With DirectAdmin, you get built-in security tools, regular updates, and proactive monitoring. We use the latest hardware and software to ensure your website is always fast and protected.
                                                 </div>
                                             </div>
                                         </div>
@@ -1708,7 +1796,7 @@ $('#myDomainForm').on('submit', function(e){
                                             </h5>
                                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordion">
                                                 <div class="accordion-body">
-                                                    Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio. Mauris et mollis quam. Nullam fringilla erat id ante commodo sodales. In maximus ultrices euismod. Vivamus porta justo ex.
+                                                    Yes, your hosting account is deployed within minutes after payment. With DirectAdmin, you can start setting up your website, email, and applications right away. If you need help, our support team is ready to assist you 24/7.
                                                 </div>
                                             </div>
                                         </div>
