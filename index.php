@@ -797,7 +797,7 @@
                                      </div>
                                 </div>
                             </form> -->
- <form id="domainSearch" class="doming-input-form wow fadeInUp" data-wow-delay=".5s"> 
+ <!-- <form id="domainSearch" class="doming-input-form wow fadeInUp" data-wow-delay=".5s"> 
   <div class="doming-input">
     <input type="text" id="domainName" placeholder="Enter domain (e.g. example)">
     <div class="select-area">
@@ -810,11 +810,31 @@
     </div>
     <button class="theme-btn bg-color-2" type="submit">Search Now</button>
   </div>
-</form>
+</form> -->
 
 
 <!-- Result Display Area -->
-<div id="result" style="margin-top: 15px; font-weight: bold;"></div>  
+<!-- <div id="result" style="margin-top: 15px; font-weight: bold;"></div>   -->
+
+
+<form id="domainSearch" class="doming-input-form wow fadeInUp" data-wow-delay=".5s">
+  <div class="doming-input">
+    <input type="text" id="domainName" placeholder="Enter domain (e.g. example)" />
+    <div class="select-area">
+      <select id="domainExtension" name="cate" class="category">
+        <option value=".com">.com</option>
+        <option value=".net">.net</option>
+        <option value=".info">.info</option>
+        <option value=".store">.store</option>
+      </select>
+    </div>
+    <button class="theme-btn bg-color-2" type="submit">Search Now</button>
+  </div>
+</form>
+
+<!-- Result Display Area -->
+<div id="result" style="margin-top: 15px; font-weight: bold;"></div>
+
 
    <!-- <form id="domainSearch" class="doming-input-form wow fadeInUp" data-wow-delay=".5s"> -->
   <!-- <div class="doming-input">
