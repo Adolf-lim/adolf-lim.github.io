@@ -126,7 +126,7 @@
                         </ul>
                         <p>RateDisco Flash Discount: Starting at <b>Rs.200/mo</b> for a Limited time</p>
                         <ul class="list">
-                            <li><i class="fa-light fa-comments"></i><a href="contact.html">Live Chat</a></li>
+                            
                             <li><i class="fa-light fa-user"></i> <a href="https://admin.ratedisco.com/index.php/login">Login </a></i>
                                 <!-- <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
                                     Login
@@ -880,9 +880,7 @@
                     <div class="row g-4 align-items-center">
                         <div class="col-lg-6">
                             <div class="about-image-items">
-                                <div class="about-sub">
-                                    Successful Hosting 25k+
-                                </div>
+                                
                                 <div class="shape-image">
                                     <img src="assets/img/about/shape.png" alt="img">
                                 </div>
@@ -1244,7 +1242,7 @@
                                         <li><span><i class="fa-solid fa-check"></i> Unlimited MySQL Databases</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Unlimited Free SSL</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Unlimited E-mail Accounts</span></li>
-                                        <li><span><i class="fa-solid fa-check"></i> cPanel + 1 Click Installer</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> DirectAdmin + 1 Click Installer</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Managed WordPress</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Multiple PHP Versions</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> PHP, NodeJS & Python Support</span></li>
@@ -1419,7 +1417,7 @@
                                         <li><span><i class="fa-solid fa-check"></i> Unlimited MySQL Databases</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Unlimited Free SSL</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Unlimited E-mail Accounts</span></li>
-                                        <li><span><i class="fa-solid fa-check"></i> cPanel + 1 Click Installer</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> DirectAdmin + 1 Click Installer</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Managed WordPress</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Multiple PHP Versions</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> PHP, NodeJS & Python Support</span></li>
@@ -1443,7 +1441,17 @@
                                 </div>
                             </div>
                             
-                            
+                            <!-- <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="pricing-items style-2">
+                                <h6 class="top-text">Cloud Startup</h6>
+                                  <div class="pricing-header-2">
+                                  <div class="price-list">
+                                   <del>Rs.1250</del>
+                              <span>SAVE 60%</span>
+                                </div>
+                                 <h2>Rs.850 <sub>/mo</sub></h2>
+                                </div>
+                            <p class="text-center">
                            Scalable Cloud Hosting for Ambitious Projects
                            </p>
         <ul class="pricing-list">
@@ -1584,7 +1592,7 @@
                                         <li><span><i class="fa-solid fa-check"></i> Unlimited MySQL Databases</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Unlimited Free SSL</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Unlimited E-mail Accounts</span></li>
-                                        <li><span><i class="fa-solid fa-check"></i> cPanel + 1 Click Installer</span></li>
+                                        <li><span><i class="fa-solid fa-check"></i> DirectAdmin + 1 Click Installer</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Managed WordPress</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> Multiple PHP Versions</span></li>
                                         <li><span><i class="fa-solid fa-check"></i> PHP, NodeJS & Python Support</span></li>
@@ -2005,8 +2013,6 @@ Spend less time waiting and more time growing your online presence.
             </div>
         </section>
 
-        
-
         <!--<< Footer Section Start >>-->
         <footer class="footer-section fix bg-cover" style="background-image: url('assets/img/section-bg.jpg');">
             <div class="footer-widgets-wrapper">
@@ -2195,16 +2201,6 @@ document.getElementById("domainSearch").addEventListener("submit", function(e) {
   const name = document.getElementById("domainName").value.trim();
   const ext = document.getElementById("domainExtension").value;
   const domain = name + ext;
-
-  const resultDiv = document.getElementById("result");
-  resultDiv.innerHTML = "🔍 Checking availability...";
-
-  fetch("https://ratedisco.com/domain-check.php?domain=" + encodeURIComponent(domain))
-    .then(response => response.json())
-    .then(data => {
-      if (data.result === "success") {
-        if (data.available) {
-          resultDiv.innerHTML = `<span style="color:green;">✅ ${domain} is available!</span>`;
         } else {
           resultDiv.innerHTML = `<span style="color:red;">❌ ${domain} is already taken.</span>`;
         }
@@ -2257,7 +2253,21 @@ document.getElementById("domainSearch").addEventListener("submit", function (e) 
       resultDiv.innerHTML = `<span style="color:red;">❌ Could not connect to server.</span>`;
     });
 });
-</script> -->
+</script>
+
+
+<!-- Add this style just before </head> or in your CSS file -->
+<style>
+/* Reduce space below pricing-section and above hosting-section */
+.pricing-section {
+    margin-bottom: 0 !important;
+    padding-bottom: 30px !important; /* adjust as needed */
+}
+.hosting-section {
+    margin-top: 0 !important;
+    padding-top: 30px !important; /* adjust as needed */
+}
+</style>
 
 
     </body>
