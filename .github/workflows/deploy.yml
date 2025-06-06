@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read         # needed to check out code
-  pages: write           # needed to push to GitHub Pages
-  id-token: write        # needed if you authenticate to cloud providers
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
@@ -19,20 +19,13 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      # (If you have a build step—for example, Jekyll, Hugo, etc.—insert it here.)
-      # e.g.:
-      # - name: Build site
-      #   run: npm install && npm run build
-      # Ensure your built files end up in ./public (or adjust the “path:” below)
-
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: .     # ← changed from ./public to . since your HTML/CSS/JS is in repo root
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-          
