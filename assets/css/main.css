@@ -2434,7 +2434,8 @@ span {
   color: var(--header);
 }
 .header-2 .header-left .logo .header-logo {
-  display: none;
+  /* display: none; */
+  display: inline-block !important;
 }
 .header-2 .header-right .search-icon {
   color: var(--text);
