@@ -36,10 +36,12 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload site content
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: '.'  # Deploy root directory (contains index.html)
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
+      - name: Output deployment URL
+        run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}"      
