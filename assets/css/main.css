@@ -2403,7 +2403,8 @@ span {
   color: var(--white);
 }
 .header-1 .header-left .logo .header-logo-2 {
-  display: none;
+  /* display: none; */
+  display: inline-block !important;
 }
 .header-1 .header-right .search-icon {
   color: var(--white);
