@@ -1,22 +1,16 @@
-# Deploy static HTML site from root to GitHub Pages using GitHub Actions
-
+# .github/workflows/static.yml
 name: Deploy static content to Pages
 
 on:
-  # Run the workflow on push to the main branch
   push:
     branches: ["main"]
-
-  # Allow manual trigger from the Actions tab
   workflow_dispatch:
 
-# Set required permissions for GitHub Pages deployment
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Ensure only one deployment at a time
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -36,10 +30,10 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload site content
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
           path: '.'  # Deploy root directory (contains index.html)
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v1
