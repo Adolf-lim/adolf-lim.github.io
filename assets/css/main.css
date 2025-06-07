@@ -2403,8 +2403,7 @@ span {
   color: var(--white);
 }
 .header-1 .header-left .logo .header-logo-2 {
-  /* display: none; */
-  display: inline-block !important;
+  display: none;
 }
 .header-1 .header-right .search-icon {
   color: var(--white);
@@ -2435,8 +2434,7 @@ span {
   color: var(--header);
 }
 .header-2 .header-left .logo .header-logo {
-  /* display: none; */
-  display: inline-block !important;
+  display: none;
 }
 .header-2 .header-right .search-icon {
   color: var(--text);
