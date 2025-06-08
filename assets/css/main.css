@@ -784,6 +784,18 @@ span {
   }
 }
 
+ .header-logo img,
+            .header-logo-2 img {
+                max-width: 180px; /* Increase this value as needed */
+                height: auto;
+            }
+            @media (max-width: 767px) {
+                .header-logo img,
+                .header-logo-2 img {
+                    max-width: 140px; /* Slightly smaller for mobile */
+                }
+            }
+
 .doming-name-wrapper {
   background-color: var(--theme);
   padding: 60px;
