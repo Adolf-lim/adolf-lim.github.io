@@ -388,10 +388,26 @@
                                 <li><span>.Info</span> Rs.1500</li>
                                 <li><span>.Net</span> Rs.800</li>
                             </ul>
-                            <form action="https://admin.ratedisco.com/cart.php?a=add&domain=register" method="post">
-Find your Domain: <input type="text" name="query" size="20" />
-<input type="submit" value="Go" />
+                            
+                          <form action="https://admin.ratedisco.com/cart.php?a=add&domain=register" method="post" class="doming-input-form wow fadeInUp" data-wow-delay=".5s">
+  <div class="doming-input">
+    <!-- WHMCS expects the domain/name here -->
+    <input type="text" name="query" placeholder="domain.com" />
+
+    <button class="theme-btn bg-color-2" type="submit">Search Now</button>
+
+    <div class="select-area">
+      <!-- name="tld" will pass the chosen extension -->
+      <select name="tld" class="category">
+        <option value=".com">.com</option>
+        <option value=".net">.net</option>
+        <option value=".info">.info</option>
+        <option value=".store">.store</option>
+      </select>
+    </div>
+  </div>
 </form>
+
 
                         </div>
                     </div>
