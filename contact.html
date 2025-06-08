@@ -403,126 +403,201 @@
         </div>
         
         <!--<< Contact Section Start >>-->
-        <!-- Contact Section Start -->
-<section class="contact-section fix section-padding pt-0">
-  <div class="container">
-    <div class="contact-wrapper">
-      <div class="row g-4">
-
-        <!-- Left Side -->
-        <div class="col-lg-6">
-          <div class="contact-left">
-            <h2 class="wow fadeInUp" data-wow-delay=".3s">
-              Request a <br> Consultation
-            </h2>
-            <div class="contact-image wow fadeInUp" data-wow-delay=".5s">
-              <img src="assets/img/contact.png" alt="contact-img">
+        <!-- <section class="contact-section fix section-padding pt-0">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                           <div class="contact-left">
+                                <h2 class="wow fadeInUp" data-wow-delay=".3s">Request a <br> Consultation</h2>
+                                <div class="contact-image wow fadeInUp" data-wow-delay=".5s">
+                                    <img src="assets/img/contact.png" alt="contact-img">
+                                </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="contact-right">
+                                <h3 class="wow fadeInUp">Get in Touch</h3>
+                                <form id="contact-form" action="contact.php" method="POST">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                            <div class="form-clt mb-3">
+                                                <input type="text" name="name" id="name" placeholder="Full Name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                            <div class="form-clt mb-3">
+                                                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                            <div class="form-clt mb-3">
+                                                <input type="text" name="phone" id="phone" placeholder="Phone Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                            <div class="form-clt mb-3">
+                                                <div class="category-oneadjust">
+                                                    <select name="cate" class="category form-select" required>
+                                                        <option value="">Select Subject</option>
+                                                        <option value="domain">Domain</option>
+                                                        <option value="hosting">Hosting</option>
+                                                        <option value="vps">VPS Hosting</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
+                                            <div class="form-clt mb-3">
+                                                <textarea name="message" id="message" placeholder="Message" rows="4" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".9s">
+                                            <div class="form-check d-flex align-items-center gap-2 mb-3 from-customradio">
+                                                <input class="form-check-input" type="radio" name="agreement" id="flexRadioDefault12" required>
+                                                <label class="form-check-label" for="flexRadioDefault12">
+                                                    I agree to the terms and conditions.
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="theme-btn">
+                                                Submit Now <i class="fa-solid fa-arrow-right-long"></i>
+                                            </button>
+                                            <div class="form-message mt-3"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section> -->
+        <!-- Contact Section Start -->
+<section class="contact-section section-padding">
+  <div class="container">
+    <h2 class="mb-4">Get in Touch</h2>
+    <form 
+      id="contact-form" 
+      action="https://formspree.io/f/xzzgebwj" 
+      method="POST"
+    >
+      <!-- Disable Formspree’s CAPTCHA (optional) -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Redirect after success (optional) -->
+      <input type="hidden" name="_next" value="https://ratedisco.com/thank-you.html">
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Full Name*</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            class="form-control" 
+            placeholder="John Doe" 
+            required
+          >
         </div>
-
-        <!-- Right Side: Form -->
-        <div class="col-lg-6">
-          <div class="contact-right">
-            <h3 class="wow fadeInUp">Get in Touch</h3>
-            <form id="contact-form" action="contact.php" method="POST">
-              <div class="row g-4">
-
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                  <div class="form-clt mb-3">
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      class="form-control"
-                      placeholder="Full Name"
-                      required
-                    >
-                  </div>
-                </div>
-
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                  <div class="form-clt mb-3">
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      class="form-control"
-                      placeholder="Email Address"
-                      required
-                    >
-                  </div>
-                </div>
-
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                  <div class="form-clt mb-3">
-                    <input
-                      type="text"
-                      name="phone"
-                      id="phone"
-                      class="form-control"
-                      placeholder="Phone Number"
-                    >
-                  </div>
-                </div>
-
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                  <div class="form-clt mb-3">
-                    <select
-                      name="cate"
-                      class="form-select"
-                      required
-                    >
-                      <option value="">Select Subject</option>
-                      <option value="domain">Domain</option>
-                      <option value="hosting">Hosting</option>
-                      <option value="vps">VPS Hosting</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
-                  <div class="form-clt mb-3">
-                    <textarea
-                      name="message"
-                      id="message"
-                      class="form-control"
-                      placeholder="Message"
-                      rows="4"
-                      required
-                    ></textarea>
-                  </div>
-                </div>
-
-                <div class="col-lg-12 wow fadeInUp" data-wow-delay=".9s">
-                  <div class="form-check d-flex align-items-center gap-2 mb-3 form-customradio">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      name="agreement"
-                      id="agreement"
-                      required
-                    >
-                    <label class="form-check-label" for="agreement">
-                      I agree to the terms and conditions.
-                    </label>
-                  </div>
-                  <button type="submit" class="theme-btn">
-                    Submit Now <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                  </button>
-                  <div class="form-message mt-3"></div>
-                </div>
-
-              </div>
-            </form>
-          </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email Address*</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            class="form-control" 
+            placeholder="you@example.com" 
+            required
+          >
         </div>
-
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            class="form-control" 
+            placeholder="+1 (555) 123-4567"
+          >
+        </div>
+        <div class="col-md-6">
+          <label for="subject" class="form-label">Subject*</label>
+          <select 
+            id="subject" 
+            name="subject" 
+            class="form-select" 
+            required
+          >
+            <option value="">Choose…</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Support">Support</option>
+            <option value="Billing">Billing</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label">Message*</label>
+          <textarea
+            id="message" 
+            name="message" 
+            class="form-control" 
+            rows="5" 
+            placeholder="How can we help you?" 
+            required
+          ></textarea>
+        </div>
+        <div class="col-12 form-check">
+          <input 
+            class="form-check-input" 
+            type="checkbox" 
+            id="agreement" 
+            name="agreement" 
+            required
+          >
+          <label class="form-check-label" for="agreement">
+            I agree to the <a href="/terms.html">terms & conditions</a>*
+          </label>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary w-100 py-2">
+            Submit Now →
+          </button>
+        </div>
+        <div class="col-12">
+          <div id="form-status" class="mt-3 text-center"></div>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
 </section>
 <!-- Contact Section End -->
+
+<script>
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = 'Sending…';
+    const data = new FormData(form);
+
+    try {
+      const resp = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (resp.ok) {
+        status.textContent = 'Thank you! We’ll be in touch soon.';
+        form.reset();
+      } else {
+        const err = await resp.json();
+        status.textContent = err.error || 'Oops! There was a problem.';
+      }
+    } catch (err) {
+      status.textContent = 'Network error. Please try again.';
+    }
+  });
+</script>
 
         
         <!-- Choose Us Section Start -->
